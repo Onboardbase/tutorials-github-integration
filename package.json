@@ -1,0 +1,17 @@
+{
+  "name": "onboardbase-tutorials",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
