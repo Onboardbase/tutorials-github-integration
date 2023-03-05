@@ -10,6 +10,9 @@ if (!port) {
   throw Error("You must set a Port for the App to Run");
 }
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+server.close();
+module.exports = { app, server };
