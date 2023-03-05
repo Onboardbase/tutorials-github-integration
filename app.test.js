@@ -1,12 +1,9 @@
-// generate integration test jest
-
 const request = require("supertest");
 const { app, server } = require("./app");
 
 afterAll(() => {
   server.close();
 });
-
 
 describe("GET /", () => {
   it("respond with Hello world", (done) => {
