@@ -28,5 +28,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
          node-version: '16.x'
-      - run: npm install
-      - run: npm test
+      - run: yarn install
+
+      - name: Install Onboardbase
+        run: yarn global add @onboardbase/cli
+
+      - name: Authenticate Onboardbase
+        run: onboardbase config:set --token ${{secrets.ONBOARDBASE_TOKEN}}
+
+      - name: Run tests
+        run: onboardbase run "yarn test"
