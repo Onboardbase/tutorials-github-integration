@@ -37,4 +37,4 @@ jobs:
         run: onboardbase config:set --token ${{secrets.ONBOARDBASE_TOKEN}}
 
       - name: Run tests
-        run: onboardbase run "yarn test"
+        run: onboardbase run "yarn test" -p simple-express-server -e development
